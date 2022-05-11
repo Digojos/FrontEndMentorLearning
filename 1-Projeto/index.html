@@ -8,38 +8,64 @@
   
   <title>Frontend Mentor | Interactive rating component</title>
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap" rel="stylesheet"> 
+
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
-    body{
-        background-color: hsl(216, 12%, 8%);
+
+    * {
+        margin:0;
     }
+
+    #main{
+        background-color: hsl(216, 12%, 8%);
+        font-family: 'Overpass', sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 100vh;
+    }
+
     #painel {
         background-color: hsl(213, 19%, 18%);
-        width: 400px;
-        height: 400px;
-        border-radius: 16px;
+        width: 350px;
+        height: 350px;
+        border-radius: 1em;
+        padding: 1.3em;
+
 
     }
+
     #star{
-        background-color: hsl(216, 12%, 54%);
+        background-color: hsl(216, 12%, 54%, 0.1);
         display: inline-block;
-        height: 16px;
-        width: 16px;
-        padding: 16px;
+        height: 1em;
+        width: 1em;
+        padding: .8em;
+        margin-bottom: 1.5em;
         border-radius: 50%;
         display: inline-block;
         text-align: center;
         text-decoration: none;
-        margin-left: 15px;
+        
     }
+
     .title{
         color: white;
+        font-weight: 700;
+        margin-bottom: .4em;
     }
+
     .p{
         color: hsl(217, 12%, 63%);
         font-size: 15px;
+        font-weight: 400;
+        margin-bottom: 2.6em;
     }
 
     .bola{
@@ -53,14 +79,17 @@
     }
 
     .bt {
-        width: 350px;
-        background-color: orange;
-        border-radius: 10px;
-        height: 35px;
+        box-sizing: border-box;
+        padding: .8em 11em;
+        background-color: hsl(25, 97%, 53%);
+        border-radius: 50vh;
+        display: inline-block;
         border: 0px;
         margin-top: 50px;
         color: white;
         font-weight: bold;
+        letter-spacing: .1em;
+        
     }
     .circle {
 
@@ -72,15 +101,15 @@
     }
 
     .dot {
-    height: 16px;
-    width: 16px;
-    padding: 16px;
-    background-color: #bbb;
+    height: 1em;
+    width: 1em;
+    padding: .8em;
+    background-color: hsl(216, 12%, 54%, .1);
+    color: hsl(217, 12%, 63%);
     border-radius: 50%;
     display: inline-block;
     text-align: center;
     text-decoration: none;
-    margin-left: 15px;
 }
     .center {
 
@@ -88,26 +117,39 @@
         width: 50%;
         padding: 10px;
     }
+
+    .flex {
+        display: flex;
+    }
+
+    .justify-center {
+        justify-content: center;
+    }
+
+    .space-betweeen {
+        justify-content: space-between;
+    }
+
+    
   </style>
 </head>
 <body>
-
     <div id="main">
         <div id="painel" class="center">
                 <div id="star">
                     <img id="imgStar" src="images/icon-star.svg" alt="">
                 </div>
                 
-                <div align="center">
+                <div>
                     <h1 class="title">How did we do?</h1>
                 </div>
 
-                <div align="center">
+                <div>
                     <p class="p" >Please let us know how we did with your support request. All feedback is appreciated 
                         to help us improve our offering!</p>
                 </div>
 
-                <div align="center">
+                <div class="flex space-betweeen">
                     <a class="dot" href="">1</a>
                     <a class="dot" href="">2</a>
                     <a class="dot" href="">3</a>
@@ -115,41 +157,23 @@
                     <a class="dot" href="">5</a>
                 </div>
 
-                <div align="center">
-                    <button class="bt">SUBMIT</button>
+                <div class="flex justify-center">
+                <button class="bt">SUBMIT</button>
                 </div>
+                
         </div>
+        <div class="attribution">
+            Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+            Coded by <a href="#">Your Name Here</a>.
+        </div> -->
     </div>
-  <!-- Rating state start
 
-  How did we do?
-
-  Please let us know how we did with your support request. All feedback is appreciated 
-  to help us improve our offering!
-
-  1 2 3 4 5
-
-  Submit
-
-  <!-- Rating state end -->
-
-  <!-- Thank you state start -->
-
-  You selected <!-- Add rating here --> out of 5
+  <!-- You selected  out of 5
 
   Thank you!
 
   We appreciate you taking the time to give a rating. If you ever need more support, 
-  don’t hesitate to get in touch!
-
-  <!-- Thank you state end -->
-
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div> -->
-
+  don’t hesitate to get in touch! -->
 
 </body>
 </html>
