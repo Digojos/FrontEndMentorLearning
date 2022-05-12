@@ -55,7 +55,6 @@
         
     }
 
-    
 
     .title{
         color: white;
@@ -141,6 +140,11 @@
         padding: 10px;
     }
 
+    .margin-img {
+        margin-bottom: 3.5em;
+        padding: .5em;
+    }
+
     .flex {
         display: flex;
     }
@@ -153,6 +157,11 @@
         justify-content: space-between;
     }
 
+    .text-align {
+        text-align: center;
+    }
+
+
     
   </style>
 </head>
@@ -162,17 +171,21 @@
                 <div id="star">
                     <img id="imgStar" src="images/icon-star.svg" alt="símbolo representando uma estrela">
                 </div>
+
+                <div id="thank_you">
+
+                </div>
                 
                 <div>
                     <h1 class="title" id="title">How did we do?</h1>
                 </div>
 
                 <div>
-                    <p class="p" >Please let us know how we did with your support request. All feedback is appreciated 
+                    <p class="p" id="text">Please let us know how we did with your support request. All feedback is appreciated 
                         to help us improve our offering!</p>
                 </div>
 
-                <div class="flex space-betweeen">
+                <div class="flex space-betweeen" id="score">
                     <a class="dot" href="">1</a>
                     <a class="dot" href="">2</a>
                     <a class="dot" href="">3</a>
@@ -202,13 +215,31 @@
       const bt = document.getElementById('bt');
       
       function changeText() {
+
         const title = document.getElementById("title");
+        const text = document.getElementById("text");
+        const score = document.getElementById("score");
+        const star = document.getElementById("star");
+        const thankYou = document.getElementById("thank_you")
+        const img = document.createElement("img");
+
+        img.src = 'images/illustration-thank-you.svg'
+
         title.innerHTML = "Thank you!";
+        text.innerHTML = "We appreciate you taking the time to give a rating. If you ever need more support, don’t hesitate to get in touch!"
+
+        thankYou.insertBefore(img, thankYou.children[0]);
+
+        title.className += ' text-align';
+        text.className += ' text-align';
+        thankYou.className += 'margin-img text-align';
+
+        score.remove();
+        bt.remove();
+        star.remove();
       };
 
       bt.addEventListener("click", changeText, false);
-
-      
 
   </script>
 </body>
