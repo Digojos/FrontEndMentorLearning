@@ -11,236 +11,48 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="design/css/style.css">
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
+    .attribution { font-size: 11px; text-align: center; margin-top: 2em;}
     .attribution a { color: hsl(228, 45%, 44%); }
-
-    * {
-        margin:0;
-        box-sizing: border-box;
-    }
-
-    #main{
-        background-color: hsl(216, 12%, 8%);
-        font-family: 'Overpass', sans-serif;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        height: 100vh;
-    }
-
-    #painel {
-        background-color: hsl(213, 19%, 18%);
-        width: 350px;
-        height: 350px;
-        border-radius: 1em;
-        padding: 1.3em;
-
-
-    }
-
-    #star{
-        background-color: hsl(216, 12%, 54%, 0.1);
-        height: 2.5em;
-        width: 2.5em;
-        padding: .75em;
-        margin-bottom: 1.5em;
-        border-radius: 50%;
-        display: inline-block;
-        text-align: center;
-        text-decoration: none;
-        
-    }
-
-
-    .title{
-        color: white;
-        font-weight: 700;
-        margin-bottom: .4em;
-    }
-
-    .p{
-        color: hsl(217, 12%, 63%);
-        font-size: 15px;
-        font-weight: 400;
-        margin-bottom: 1.8em;
-    }
-
-    .bola{
-        border-radius: 1000px;
-        display: inline-block;
-        padding: 15px;
-        margin-left: 20px;
-        height: 20px;
-        width: 20px;
-        background-color: red;
-    }
-
-    .bt {
-        box-sizing: border-box;
-        padding: .8em 9.2em;
-        background-color: hsl(25, 97%, 53%);
-        border-radius: 50vh;
-        display: inline-block;
-        border: 0px;
-        color: white;
-        font-weight: 700;
-        letter-spacing: .1em;
-        
-    }
-
-    .bt:hover {
-        color: hsl(25, 97%, 53%);
-        background-color: white;
-        transition: all .5s ease;
-        cursor: pointer;
-    }
-
-    .circle {
-
-        background: lightblue;
-        border-radius: 50%;
-        width: 300px;
-        height: 300px;
-        padding: 15px;
-    }
-
-    .dot {
-    height: 2.5em;
-    width: 2.5em;
-    padding: .75em;
-    background-color: hsl(216, 12%, 54%, .1);
-    color: hsl(217, 12%, 63%);
-    border-radius: 50%;
-    display: inline-block;
-    text-align: center;
-    text-decoration: none;
-    margin-bottom: 1.8em;
-    }
-
-    .dot:focus {
-        background-color: hsl(216, 12%, 54%);
-        color: white;
-        transition: all .5s ease;
-    }
-
-    .dot:hover {
-        background-color: hsl(25, 97%, 53%);
-        color: white;
-        transition: all .5s ease;
-    }
-
-    .center {
-
-        margin: auto;
-        width: 50%;
-        padding: 10px;
-    }
-
-    .margin-img {
-        margin-bottom: 3.5em;
-        padding: .5em;
-    }
-
-    .flex {
-        display: flex;
-    }
-
-    .justify-center {
-        justify-content: center;
-    }
-
-    .space-betweeen {
-        justify-content: space-between;
-    }
-
-    .text-align {
-        text-align: center;
-    }
-
-
-    
   </style>
 </head>
 <body>
-    <div id="main">
-        <div id="painel" class="center">
-                <div id="star">
-                    <img id="imgStar" src="images/icon-star.svg" alt="símbolo representando uma estrela">
-                </div>
+    <div class="main">
+        <div class="painel">
 
-                <div id="thank_you">
-
-                </div>
+                    <div class="star"><img src="images/icon-star.svg" alt="símbolo representando uma estrela"></div>
                 
-                <div>
-                    <h1 class="title" id="title">How did we do?</h1>
-                </div>
-
-                <div>
-                    <p class="p" id="text">Please let us know how we did with your support request. All feedback is appreciated 
+                    <h1 class="title">How did we do?</h1>
+                
+                    <p class="p">Please let us know how we did with your support request. All feedback is appreciated 
                         to help us improve our offering!</p>
-                </div>
-
-                <div class="flex space-betweeen" id="score">
-                    <a class="dot" href="">1</a>
-                    <a class="dot" href="">2</a>
-                    <a class="dot" href="">3</a>
-                    <a class="dot" href="">4</a>
-                    <a class="dot" href="">5</a>
-                </div>
-
-                <div class="flex justify-center">
-                <button class="bt" id="bt">SUBMIT</button>
-                </div>
                 
+                <form>
+
+                    <div class="flex space-betweeen rating-container">
+                        <a class="dot" data-value="1" href="#">1</a>
+                        <a class="dot" data-value="2" href="#">2</a>
+                        <a class="dot" data-value="3" href="#">3</a>
+                        <a class="dot" data-value="4" href="#">4</a>
+                        <a class="dot" data-value="5" href="#">5</a>
+                    </div>
+    
+                    <div class="flex justify-center">
+                    <button class="bt" id="bt">SUBMIT</button>
+                    </div>
+
+                </form>        
         </div>
         <div class="attribution">
             Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-            Coded by <a href="#">Your Name Here</a>.
+            Coded by <a href="#">Levy / Rodrigo</a>.
         </div> -->
     </div>
 
-  <!-- You selected  out of 5
+    <script src="design/js/script.js"></script>
 
-  Thank you!
-
-  We appreciate you taking the time to give a rating. If you ever need more support, 
-  don’t hesitate to get in touch! -->
-
-  <script>
-      const bt = document.getElementById('bt');
-      
-      function changeText() {
-
-        const title = document.getElementById("title");
-        const text = document.getElementById("text");
-        const score = document.getElementById("score");
-        const star = document.getElementById("star");
-        const thankYou = document.getElementById("thank_you")
-        const img = document.createElement("img");
-
-        img.src = 'images/illustration-thank-you.svg'
-
-        title.innerHTML = "Thank you!";
-        text.innerHTML = "We appreciate you taking the time to give a rating. If you ever need more support, don’t hesitate to get in touch!"
-
-        thankYou.insertBefore(img, thankYou.children[0]);
-
-        title.className += ' text-align';
-        text.className += ' text-align';
-        thankYou.className += 'margin-img text-align';
-
-        score.remove();
-        bt.remove();
-        star.remove();
-      };
-
-      bt.addEventListener("click", changeText, false);
-
-  </script>
 </body>
 </html>
