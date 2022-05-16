@@ -1,0 +1,127 @@
+* {
+    margin:0;
+    box-sizing: border-box;
+}
+
+.main{
+    background-color: hsl(216, 12%, 8%);
+    font-family: 'Overpass', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.painel {
+    background-color: hsl(213, 19%, 18%);
+    width: 350px;
+    height: 350px;
+    border-radius: 1em;
+    padding: 1.3em;
+
+
+}
+
+.star{
+    background-color: hsl(216, 12%, 54%, 0.1);
+    height: 2.5em;
+    width: 2.5em;
+    margin-bottom: 1.5em;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.title{
+    color: white;
+    font-weight: 700;
+    margin-bottom: .4em;
+}
+
+.p{
+    color: hsl(217, 12%, 63%);
+    font-size: 15px;
+    font-weight: 400;
+    margin-bottom: 1.8em;
+}
+
+.bt {
+    box-sizing: border-box;
+    padding: .8em 9.2em;
+    background-color: hsl(25, 97%, 53%);
+    border-radius: 50vh;
+    display: inline-block;
+    border: 0px;
+    color: white;
+    font-weight: 700;
+    letter-spacing: .1em;
+    outline: none;
+    
+}
+
+.bt:hover {
+    color: hsl(25, 97%, 53%);
+    background-color: white;
+    transition: all .5s ease;
+    cursor: pointer;
+}
+
+.dot {
+height: 2.5em;
+width: 2.5em;
+padding: .75em;
+background-color: hsl(216, 12%, 54%, .1);
+color: hsl(217, 12%, 63%);
+border-radius: 50%;
+display: inline-block;
+text-align: center;
+text-decoration: none;
+margin-bottom: 1.8em;
+}
+
+.dot:hover {
+    background-color: hsl(216, 12%, 54%);
+    color: white;
+    transition: all .5s ease;
+}
+
+.dot:focus {
+    background-color: hsl(25, 97%, 53%);
+    color: white;
+    transition: all .5s ease;
+    outline: none;
+}
+
+
+
+.margin-img {
+    padding-top: 1em;
+}
+
+.flex {
+    display: flex;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.space-betweeen {
+    justify-content: space-between;
+}
+
+.text-align {
+    text-align: center;
+}
+
+.result {
+    background-color: hsl(216, 12%, 54%, .15);
+    color: hsl(25, 97%, 53%);
+    display: inline-block;
+    margin: 1em 0;
+    padding: .3em 1em;
+    border-radius: 50vh;
+}
